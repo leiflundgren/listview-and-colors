@@ -1,4 +1,6 @@
-﻿namespace listview_and_colors
+﻿using System.Drawing;
+
+namespace listview_and_colors
 {
     partial class Form1
     {
@@ -238,6 +240,29 @@
             "Orci varius ",
             "natoque penatibus ",
             "et magnis dis "}, -1);
+            listViewItem1.UseItemStyleForSubItems = false;
+            listViewItem2.UseItemStyleForSubItems = false;
+            listViewItem3.UseItemStyleForSubItems = false;
+            listViewItem4.UseItemStyleForSubItems = false;
+            listViewItem5.UseItemStyleForSubItems = false;
+            listViewItem6.UseItemStyleForSubItems = false;
+            listViewItem7.UseItemStyleForSubItems = false;
+            listViewItem8.UseItemStyleForSubItems = false;
+            listViewItem9.UseItemStyleForSubItems = false;
+            listViewItem10.UseItemStyleForSubItems = false;
+            listViewItem11.UseItemStyleForSubItems = false;
+            listViewItem12.UseItemStyleForSubItems = false;
+            listViewItem13.UseItemStyleForSubItems = false;
+            listViewItem14.UseItemStyleForSubItems = false;
+            listViewItem15.UseItemStyleForSubItems = false;
+            listViewItem16.UseItemStyleForSubItems = false;
+            listViewItem17.UseItemStyleForSubItems = false;
+            listViewItem18.UseItemStyleForSubItems = false;
+            listViewItem19.UseItemStyleForSubItems = false;
+            listViewItem20.UseItemStyleForSubItems = false;
+            listViewItem21.UseItemStyleForSubItems = false;
+            listViewItem7.ForeColor = Color.Red;
+            listViewItem8.BackColor= Color.LightSalmon;
             this.grpColors = new System.Windows.Forms.GroupBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();

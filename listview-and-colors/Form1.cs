@@ -53,17 +53,36 @@ namespace listview_and_colors
             var checkedButton = grpColors.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             if (checkedButton == null)
                 return;
+            Color c = ((Panel)checkedButton.Tag).BackColor;
 
-            ListViewItem.ListViewSubItem sub = GetSubitemAt(e.X, e.Y);
-            if (sub == null)
+            // var set_color_on = listView1.GetItemAt(e.X, e.Y);
+
+            ListViewItem itm = null;
+            for ( int i=listView1.Items.Count-1; i >= 0; --i )
+                if ( listView1.Items[i].GetBounds(ItemBoundsPortion.Entire).Contains(e.X, e.Y))
+                { 
+                    itm = listView1.Items[i];
+                    break;
+                }
+            if (itm == null)
                 return;
 
-            Color c = ((Panel)checkedButton.Tag).ForeColor;
+            ListViewItem.ListViewSubItem sub = itm.GetSubItemAt(e.X, e.Y);
+            if (sub == null)
+                return;
+            var set_color_on = sub;
+
+
+            if (set_color_on == null)
+                return;
 
             if (e.Button == MouseButtons.Left)
-                sub.ForeColor = c;
+                set_color_on.ForeColor = c;
             else if (e.Button == MouseButtons.Right)
-                sub.BackColor = c;
+                set_color_on.BackColor = c;
+            
+            
+            //listView1.Refresh();
         }
     }
 }
