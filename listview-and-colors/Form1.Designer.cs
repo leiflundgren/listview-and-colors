@@ -529,7 +529,7 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
-            this.listView1.HideSelection = false;
+            this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
@@ -554,7 +554,9 @@
             listViewItem21});
             this.listView1.Location = new System.Drawing.Point(298, 48);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
+            this.listView1.ShowGroups = false;
             this.listView1.Size = new System.Drawing.Size(1237, 624);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;

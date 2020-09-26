@@ -35,11 +35,16 @@ namespace listview_and_colors
 
         private ListViewItem.ListViewSubItem GetSubitemAt(int x, int y)
         {
-            ListViewItem itm = listView1.GetItemAt(x, x);
+            ListViewItem itm = listView1.GetItemAt(x, y);
             if (itm != null)
-                foreach (ListViewItem.ListViewSubItem sub in itm.SubItems)
+            {
+                //x -= itm.Position.X;
+                //y -= itm.Position.Y;
+                foreach (ListViewItem.ListViewSubItem sub in itm.SubItems.Cast<ListViewItem.ListViewSubItem>().Reverse() )
                     if (sub.Bounds.Contains(x, y))
                         return sub;
+            }
+
             return null;
         }
 
