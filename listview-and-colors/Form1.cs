@@ -81,7 +81,14 @@ namespace listview_and_colors
                 set_color_on.ForeColor = c;
             else if (e.Button == MouseButtons.Right)
                 set_color_on.BackColor = c;
-            
+
+            if ((ModifierKeys & (Keys.Shift | Keys.Control)) != Keys.None)
+            {
+                FontStyle style =
+                    (((ModifierKeys & Keys.Control) == Keys.Control) ? FontStyle.Italic : FontStyle.Regular)
+                    | (((ModifierKeys & Keys.Shift) == Keys.Shift) ? FontStyle.Bold : FontStyle.Regular);
+                set_color_on.Font = new Font(set_color_on.Font, style);
+            }
             
             //listView1.Refresh();
         }
