@@ -26,6 +26,7 @@ namespace listview_and_colors
             radioButton7.Tag = panel7;
             radioButton8.Tag = panel8;
             radioButton9.Tag = panel9;
+            radioButton10.Tag = panel10;
         }
 
         private void listView1_Click(object sender, EventArgs e)
